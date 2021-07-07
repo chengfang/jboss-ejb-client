@@ -18,16 +18,10 @@
 package org.jboss.ejb.client.test;
 
 import java.io.File;
-import java.nio.file.Path;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
-import javax.transaction.TransactionManager;
-import javax.transaction.TransactionSynchronizationRegistry;
-import javax.transaction.UserTransaction;
 
 import com.arjuna.ats.arjuna.common.ObjectStoreEnvironmentBean;
 import com.arjuna.ats.internal.jbossatx.jta.jca.XATerminator;
@@ -36,9 +30,10 @@ import com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionSynchroniza
 import com.arjuna.ats.jta.common.JTAEnvironmentBean;
 import com.arjuna.ats.jta.common.jtaPropertyManager;
 import com.arjuna.common.internal.util.propertyservice.BeanPopulator;
-import org.jboss.ejb.client.test.common.DummyServer;
+import jakarta.transaction.TransactionManager;
+import jakarta.transaction.TransactionSynchronizationRegistry;
+import jakarta.transaction.UserTransaction;
 import org.jboss.ejb.client.test.common.Echo;
-import org.jboss.ejb.client.test.common.EchoBean;
 import org.jboss.ejb.client.test.common.StatefulEchoBean;
 import org.jboss.ejb.client.test.common.StatelessEchoBean;
 import org.jboss.logging.Logger;
@@ -49,7 +44,6 @@ import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.wildfly.naming.client.WildFlyInitialContextFactory;
 import org.wildfly.naming.client.WildFlyRootContext;

@@ -36,8 +36,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import javax.ejb.EJBException;
-import javax.ejb.NoSuchEJBException;
+import jakarta.ejb.EJBException;
+import jakarta.ejb.NoSuchEJBException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.concurrent.TimeUnit;
